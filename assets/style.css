@@ -1,38 +1,6 @@
-html,
-body {
-  height: 100%;
-}
-
-body {
-  text-align: center;
-  background-image: url("../image/0d2.jpg"); 
-  background-size: cover;
-}
-
-h1 {
-	color:black;
-	font-style: bold;
-	text-shadow: 2px 2px black;
-}
-
-.container {
-	color: black;
-	font-style: bold;
-	text-shadow: 2px 2px black;
-}
-
-#time-left {
-	color:black;
-	font-style: bold;
-	text-shadow: 2px 2px black;
-}
-
-button {
-    background-color: #4CAF50;
-    color:black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
+div {
+    margin-bottom: 20px;
+  }
+  .correct, .incorrect {
+    text-transform: capitalize;
+  }
