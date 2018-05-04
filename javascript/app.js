@@ -26,7 +26,7 @@ var questionAnswers = [{
         possibleAnswers: ["Andrew Reynolds", "Mark Appleyard", "Bastien Salabanzi", "Chad Muska"]
     }
 ]
-var displayQuestions = function () {
+ function displayQuestions() {
     for (var i = 0; i < questionAnswers.length; i++) {
         var question = $("<h2/>").html(questionAnswers[i].question);
         var possibleAnswers = questionAnswers[i].possibleAnswers
@@ -39,7 +39,7 @@ var displayQuestions = function () {
         $("#content").append(answers);
     }
 }
-var displayAnswers = function (possibleAnswers, questionNumber, correctAnswer) {
+function displayAnswers (possibleAnswers, questionNumber, correctAnswer) {
     var answerContainer = $("<div/>");
     answerContainer.addClass("answer-con");
     for (var i = 0; i < possibleAnswers.length; i++) {
@@ -58,13 +58,12 @@ var user = {
     skipedQuestions: 0
 }
 var timer = 0;
-var start = function () {
+function start() {
     var intervalId = setInterval(incrementTimer, 1000);
     $(".start").on("click", function () {
         displayQuestions();
     });
-}
-var timesup = function () {
+} function timesup () {
     $(".time-left").append("<h2>Time's Up!</h2>");
     allInputs = $("input:checked")
     for (var i = 0; i < allInputs.length; i++) {
@@ -79,14 +78,14 @@ var timesup = function () {
     $(".time-left").append(correct);
     $(".time-left").append(wrong);
 }
-var incrementTimer = function () {
+function incrementTimer () {
     timer++
     $(".time-left").html("Elapsed Time: " + timer);
     if (timer === 100) {
         timesup();
     }
 }
-var reset = function () {
+function reset () {
     timer = 0;
 }
 start();
