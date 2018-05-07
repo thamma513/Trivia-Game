@@ -10,6 +10,9 @@ $(document).on('click','.answer-button',function(e){
 $(document).on('click','#reset',function(){
     game.reset();
 })
+$(document).ready(function(){
+    $(".bg").css("background-image", "url('Trivia-Game/assets/images/20160601_235900.png')");
+ });
 
 var questions = [{
         question: "Which of these skateboarders was the first person to ollie the El Toro High School stairs?",
@@ -112,6 +115,7 @@ var game = {
         game.correct++;
         $('#subwrapper').html('<h2>YOU GOT IT RIGHT!</h2>');
         // $('#subwrapper').append('<img>' +questions[game.currentQuestion].image[i]+ '</img>'); trying to display image after correct answer.
+        $('<img src=' + +questions[game.currentQuestion].image+'</img>' ).appendTo(".image");
         if (game.currentQuestion==questions.length-1){
             setTimeout(game.results,3*1000);
         } else {
