@@ -75,9 +75,8 @@ var game = {
     showImage: function (index) {
 
         console.log(questions);
-        var img = $('<img >');
+        var img = $("<img class='img-responsive'>");
         img.attr("src", questions[index].image);
-
         $("#image").append(img);
     },
     nextQuestion: function () {
