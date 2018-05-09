@@ -1,0 +1,20 @@
+.jumbotron{
+    background-color:transparent;
+}
+body{
+    height: 100%; 
+    background-image: url("../images/kickflip.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+ 
+ 
+ .wrapper{
+     background-color:transparent;
+ }
+ h2{
+     color:snow;
+ }
+ .image{}
+ 
