@@ -75,7 +75,7 @@ var game = {
     showImage: function (index) {
 
         console.log(questions);
-        var img = $("<img class='img-responsive'>");
+        var img = $("<img class='img-fluid text-center'>");
         img.attr("src", questions[index].image);
         $("#image").append(img);
     },
@@ -92,7 +92,7 @@ var game = {
         $('#subwrapper').html('<h2>OUT OF TIME!</h2>');
         $('#subwrapper').append('<h3>THE CORRECT ANSWER WAS: ' + questions[game.currentQuestion].correctAnswer + '</h3>');
         if (game.currentQuestion == questions.length - 1) {
-            setTimeout(game.results, 3 * 1000);
+            setTimeout(game.results, 3 * 10000);
         } else {
             setTimeout(game.nextQuestion, 3 * 1000);
         }
